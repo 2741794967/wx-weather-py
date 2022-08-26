@@ -2,7 +2,7 @@ name: evening
 
 on:
   schedule:
-    - cron: '46 12 * * *'
+    - cron: '49 12 * * *'
   workflow_dispatch:
 jobs:
   send_message:

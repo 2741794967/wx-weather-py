@@ -67,6 +67,20 @@ def get_weather(city):
         'city']
 
 
+# 总天数
+def get_count(start_date):
+    delta = today - datetime.strptime(start_date, "%Y-%m-%d")
+    return delta.days
+
+
+# 计算生日天数
+def get_birthday(birthday):
+    print(birthday)
+    next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
+    if next < datetime.now():
+        next = next.replace(year=next.year + 1)
+    return (next - today).days
+
 # 发送消息 支持批量用户
 def send_message():
     for user in user_id_list:

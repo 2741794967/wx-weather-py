@@ -1,6 +1,8 @@
 name: morning
 
 on:
+  schedule:
+    - cron: '00 19 * * *'
   workflow_dispatch:
 jobs:
   send_message:
